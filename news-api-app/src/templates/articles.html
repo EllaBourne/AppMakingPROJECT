@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fintech News Articles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Fintech News Articles</h1>
+    <section style="background:#e6f2fb;padding:20px;border-radius:8px;margin-bottom:24px;">
+        <h2 style="color:#003B70;">Ella X PyTorch Daily Fintech Rundown</h2>
+        <p>{{ summary }}</p>
+    </section>
+    <ul>
+      {% for article in articles %}
+        <li>
+          <a href="{{ article.url }}" target="_blank">{{ article.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <a class="back-link" href="/">Back to Home</a>
+</body>
+</html>

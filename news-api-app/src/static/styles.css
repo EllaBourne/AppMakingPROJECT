@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    background: #003B70; /* Citi blue */
+    color: #fff;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 6px solid #00AEEF; /* Citi light blue */
+    box-shadow: 0 2px 4px rgba(0,59,112,0.05);
+}
+a {
+    color: #00AEEF; /* Citi light blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #8DC63F; /* Citi green */
+    text-decoration: underline;
+}
+.back-link {
+    display: inline-block;
+    margin: 20px 0 0 0;
+    color: #003B70;
+}
