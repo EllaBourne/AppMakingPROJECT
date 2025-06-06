@@ -4,12 +4,18 @@ from db.memory_db import MemoryDB
 
 # Add these imports
 from transformers import pipeline
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
 # Initialize once for simplicity
 memory_db = MemoryDB()
-news_client = NewsClient("d4b6777932da4e32ba9d8972d1aa7984")
+
+# Load environment variables from .env file
+load_dotenv()
+news_api_key = os.environ.get("NEWS_API_KEY")
+news_client = NewsClient(news_api_key)
 
 # Load summarization pipeline once at startup
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
