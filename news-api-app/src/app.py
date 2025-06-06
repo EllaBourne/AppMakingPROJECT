@@ -18,7 +18,7 @@ news_api_key = os.environ.get("NEWS_API_KEY")
 news_client = NewsClient(news_api_key)
 
 # Load summarization pipeline once at startup
-summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-6-6")
 
 def generate_summary(articles):
     # Concatenate descriptions for summarization
